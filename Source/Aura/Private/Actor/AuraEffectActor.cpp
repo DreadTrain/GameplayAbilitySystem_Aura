@@ -15,7 +15,7 @@ AAuraEffectActor::AAuraEffectActor()
 }
 
 void AAuraEffectActor::BeginPlay()
-{
+{g
 	Super::BeginPlay();
 	
 }

@@ -2,8 +2,8 @@
 
 #pragma once
 
-#include "CoreMinimal.h"
-#include "AttributeSet.h"
+//#include "CoreMinimal.h"
+//#include "AttributeSet.h"
 #include "AbilitySystemComponent.h"
 #include "AuraAttributeSet.generated.h"
 

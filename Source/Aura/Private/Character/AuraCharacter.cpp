@@ -10,6 +10,7 @@
 #include "UI/HUD/AuraHUD.h"
 
 
+
 AAuraCharacter::AAuraCharacter()
 {
 	GetCharacterMovement()->bOrientRotationToMovement = true;
@@ -54,5 +55,5 @@ void AAuraCharacter::InitAbilityActorInfo()
 			AuraHUD->InitOverlay(AuraPlayerController, AuraPlayerState, AbilitySystemComponent, AttributeSet);
 		}
 	}
-	InitializePrimaryAttributes();
+	InitializeDefaultAttributes();
 }

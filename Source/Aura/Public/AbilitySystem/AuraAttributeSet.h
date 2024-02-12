@@ -81,7 +81,7 @@ public:
 	ATTRIBUTE_ACCESSORS(UAuraAttributeSet, Vigor);
 	
     /*
-    * Secondary Attributes
+    * Secondary Attributes TODO: Remove ReplicatedUsing = OnRep_whatever for Secondary Attributes as they dont need replication. If I get bad Net Performance
     */
 
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_Armor, Category = "Secondary Attributes")

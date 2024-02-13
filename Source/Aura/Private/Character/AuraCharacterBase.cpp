@@ -1,7 +1,8 @@
 // Copyright Mind Crawler Studio
 
-#include "AbilitySystemComponent.h"
 #include "Character/AuraCharacterBase.h"
+#include "AbilitySystemComponent.h"
+
 
 
 AAuraCharacterBase::AAuraCharacterBase()

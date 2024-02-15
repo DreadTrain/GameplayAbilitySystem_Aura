@@ -5,13 +5,13 @@
 #include "CoreMinimal.h"
 #include "AuraInputConfig.h"
 #include "EnhancedInputComponent.h"
-#include "AuraEnhancedInputComponent.generated.h"
+#include "AuraInputComponent.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class AURA_API UAuraEnhancedInputComponent : public UEnhancedInputComponent
+class AURA_API UAuraInputComponent : public UEnhancedInputComponent
 {
 	GENERATED_BODY()
 public:
@@ -20,7 +20,7 @@ public:
 };
 
 template <class UserClass, typename PressedFuncType, typename ReleasedFuncType, typename HeldFuncType>
-void UAuraEnhancedInputComponent::BindAbilityActions(const UAuraInputConfig* InputConfig, UserClass* Object, PressedFuncType PressedFunc, ReleasedFuncType ReleasedFunc, HeldFuncType HeldFunc)
+void UAuraInputComponent::BindAbilityActions(const UAuraInputConfig* InputConfig, UserClass* Object, PressedFuncType PressedFunc, ReleasedFuncType ReleasedFunc, HeldFuncType HeldFunc)
 {
 	check(InputConfig);
 

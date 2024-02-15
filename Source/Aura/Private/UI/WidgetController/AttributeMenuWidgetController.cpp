@@ -16,9 +16,9 @@ void UAttributeMenuWidgetController::BroadcastInitialValues()
 {
 	UAuraAttributeSet* AS = CastChecked<UAuraAttributeSet>(AttributeSet);
 
-	check(AttributeIfo);
+	check(AttributeInfo);
 
-	FAuraAttributeInfo Info = AttributeIfo->FindAttributeInfoForTag(FAuraGameplayTags::Get().Attributes_Primary_Strength);
+	FAuraAttributeInfo Info = AttributeInfo->FindAttributeInfoForTag(FAuraGameplayTags::Get().Attributes_Primary_Strength);
 	Info.AttributeValue = AS->GetStrength();
 	AttributeInfoDelegate.Broadcast(Info);
 	

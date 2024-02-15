@@ -27,5 +27,5 @@ public:
 protected:
 
 	UPROPERTY(EditAnywhere)
-	TObjectPtr<UAttributeInfo> AttributeIfo;
+	TObjectPtr<UAttributeInfo> AttributeInfo;
 };

@@ -198,6 +198,11 @@ GameplayTags.Attributes_Resistance_Fire = UGameplayTagsManager::Get().AddNativeG
 		FString("Attack Ability Tag")
 		);
 
+	GameplayTags.Abilities_Summon = UGameplayTagsManager::Get().AddNativeGameplayTag(
+		FName("Abilities.Summon"),
+		FString("Summon Ability Tag")
+		);
+
 	/*
     *  Combat Sockets
     */

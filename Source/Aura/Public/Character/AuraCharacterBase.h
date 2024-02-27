@@ -58,6 +58,12 @@ protected:
 	UPROPERTY(EditAnywhere, Category= "Combat")
 	FName RightHandSocketName;
 
+	UPROPERTY(EditAnywhere, Category= "Combat")
+	FName CastSocketName;
+
+	UPROPERTY(EditAnywhere, Category= "Combat")
+	FName FaceSocketName;
+
 	bool bDead = false;
 	
 	UPROPERTY()

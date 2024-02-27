@@ -217,6 +217,16 @@ GameplayTags.Attributes_Resistance_Fire = UGameplayTagsManager::Get().AddNativeG
 		FString("Left Hand")
 		);
 
+	GameplayTags.CombatSocket_Cast = UGameplayTagsManager::Get().AddNativeGameplayTag(
+		FName("CombatSocket.Cast"),
+		FString("Cast")
+		);
+
+	GameplayTags.CombatSocket_Face = UGameplayTagsManager::Get().AddNativeGameplayTag(
+		FName("CombatSocket.Face"),
+		FString("Face")
+		);
+
 	/*
 	*  Montage Tags
 	*/

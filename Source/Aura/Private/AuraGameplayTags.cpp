@@ -202,9 +202,9 @@ void FAuraGameplayTags::InitializeNativeGameplayTags()
 			);
 
 	GameplayTags.Debuff_Stun = UGameplayTagsManager::Get().AddNativeGameplayTag(
-				FName("Debuff.Stun"),
-				FString("Debuff for Lightning Damage")
-				);
+		FName("Debuff.Stun"),
+			FString("Debuff for Lightning Damage")
+			);
 	
 	GameplayTags.Debuff_Chance = UGameplayTagsManager::Get().AddNativeGameplayTag(
 			FName("Debuff.Chance"),

@@ -37,7 +37,13 @@ FDamageEffectParams UAuraDamageGameplayAbility::MakeDamageEffectParamsFromClassD
 		Rotation.Pitch = 45.f;
 		const FVector ToTarget = Rotation.Vector();
 		Params.DeathImpulse = ToTarget * DeathImpulseMagnitude;
-		Params.KnockbackForce = ToTarget * KnockbackForceMagnitude;
+
+		// I added the if check, remove everything but this: "Params.KnockbackForce = ToTarget * KnockbackForceMagnitude;" if it fucks shit up. 
+		const bool bKnockback = FMath::RandRange(1, 100) < Params.KnockbackChance;
+		if (bKnockback)
+		{
+			Params.KnockbackForce = ToTarget * KnockbackForceMagnitude;
+		}
 	}
 	return Params;
 }

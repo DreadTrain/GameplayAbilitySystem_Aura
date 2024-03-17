@@ -302,6 +302,8 @@ void UAuraAttributeSet::PostAttributeChange(const FGameplayAttribute& Attribute,
 	}
 }
 
+/* The below code was added by me because of a crash that is prolly related to my meatthrowers not having all the added tags or whatever in BP's
+ 
 void UAuraAttributeSet::ShowFloatingText(const FEffectProperties& Props, float Damage, bool bBlockedHit, bool bCriticalHit) const
 {
 	if (Props.SourceCharacter == nullptr || Props.TargetCharacter == nullptr)
@@ -330,22 +332,23 @@ void UAuraAttributeSet::ShowFloatingText(const FEffectProperties& Props, float D
 		}
 	}
 }
+*/
 
-//void UAuraAttributeSet::ShowFloatingText(const FEffectProperties& Props, float Damage, bool bBlockedHit, bool bCriticalHit) const
-//{
-//	if (Props.SourceCharacter != Props.TargetCharacter)
-//	{
-//		if (AAuraPlayerController* PC = Cast<AAuraPlayerController>(Props.SourceCharacter->Controller))
-//		{
-//			PC->ShowDamageNumber(Damage, Props.TargetCharacter, bBlockedHit, bCriticalHit);
-//			return;
-//		}
-//		if (AAuraPlayerController* PC = Cast<AAuraPlayerController>(Props.TargetCharacter->Controller))
-//		{
-//			PC->ShowDamageNumber(Damage, Props.TargetCharacter, bBlockedHit, bCriticalHit);
-//		}
-//	}
-//}
+void UAuraAttributeSet::ShowFloatingText(const FEffectProperties& Props, float Damage, bool bBlockedHit, bool bCriticalHit) const
+{
+	if (Props.SourceCharacter != Props.TargetCharacter)
+	{
+		if (AAuraPlayerController* PC = Cast<AAuraPlayerController>(Props.SourceCharacter->Controller))
+		{
+			PC->ShowDamageNumber(Damage, Props.TargetCharacter, bBlockedHit, bCriticalHit);
+			return;
+		}
+		if (AAuraPlayerController* PC = Cast<AAuraPlayerController>(Props.TargetCharacter->Controller))
+		{
+			PC->ShowDamageNumber(Damage, Props.TargetCharacter, bBlockedHit, bCriticalHit);
+		}
+	}
+}
 
 void UAuraAttributeSet::SendXPEvent(const FEffectProperties& Props)
 {

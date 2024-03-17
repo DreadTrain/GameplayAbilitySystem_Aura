@@ -90,5 +90,9 @@ public:
 	ECharacterClass GetCharacterClass();
 
 	virtual FOnASCRegistered GetOnAscRegisteredDelegate() = 0;
+	// This line doesn't exist in example code, check again after lesson 333
 	virtual FOnDeath GetOnDeathDelegate() = 0;
+
+	UFUNCTION(BlueprintImplementableEvent, BlueprintCallable)
+	void SetInShockLoop(bool bInLoop);
 };
